@@ -11,22 +11,22 @@ public class PaddleMovement : MonoBehaviour
     {
         if (tag.Equals("Player1"))
         {
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) && transform.position.y <= 2.5)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y + speed * Time.deltaTime);
             }
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S) && transform.position.y >= -2.5)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y + -speed * Time.deltaTime);
             }
         }
         if (tag.Equals("Player2"))
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow) && transform.position.y <= 2.5)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y + speed * Time.deltaTime);
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow) && transform.position.y >= -2.5)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y + -speed * Time.deltaTime);
             }
